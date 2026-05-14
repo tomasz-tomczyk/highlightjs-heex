@@ -1,6 +1,6 @@
 {
   "name": "highlightjs-heex",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "highlight.js grammar for HEEx (HTML+Embedded Elixir) templates",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
