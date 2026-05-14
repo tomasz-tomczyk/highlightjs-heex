@@ -1,0 +1,55 @@
+{
+  "name": "highlightjs-heex",
+  "version": "1.0.0",
+  "description": "highlight.js grammar for HEEx (HTML+Embedded Elixir) templates",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "browser": "dist/heex.min.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.cjs"
+    },
+    "./heex": {
+      "import": "./src/languages/heex.js",
+      "require": "./dist/heex.cjs"
+    }
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "prebuild": "rm -rf dist",
+    "test": "node test/test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "highlight.js",
+    "hljs",
+    "heex",
+    "elixir",
+    "phoenix",
+    "liveview",
+    "template",
+    "syntax-highlighting"
+  ],
+  "author": "Tomasz Tomczyk",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomasz-tomczyk/highlightjs-heex.git"
+  },
+  "peerDependencies": {
+    "highlight.js": ">=11.0.0"
+  },
+  "devDependencies": {
+    "highlight.js": "^11.11.1",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.0",
+    "rollup": "^4.0.0"
+  }
+}
